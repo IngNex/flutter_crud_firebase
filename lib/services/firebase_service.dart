@@ -47,3 +47,8 @@ Future<void> putUser(String uid, String newName) async {
     'name': newName,
   });
 }
+
+//Delete in User name
+Future<void> deleteUser(String uid) async {
+  await database.collection('user').doc(uid).delete();
+}
